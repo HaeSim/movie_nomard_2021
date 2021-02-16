@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/movie_nomard_2021/static/css/main.6b35c89a.chunk.css",
+    "main.js": "/movie_nomard_2021/static/js/main.871a1214.chunk.js",
+    "main.js.map": "/movie_nomard_2021/static/js/main.871a1214.chunk.js.map",
+    "runtime-main.js": "/movie_nomard_2021/static/js/runtime-main.475c9054.js",
+    "runtime-main.js.map": "/movie_nomard_2021/static/js/runtime-main.475c9054.js.map",
+    "static/js/2.d7ff5cb8.chunk.js": "/movie_nomard_2021/static/js/2.d7ff5cb8.chunk.js",
+    "static/js/2.d7ff5cb8.chunk.js.map": "/movie_nomard_2021/static/js/2.d7ff5cb8.chunk.js.map",
+    "index.html": "/movie_nomard_2021/index.html",
+    "static/css/main.6b35c89a.chunk.css.map": "/movie_nomard_2021/static/css/main.6b35c89a.chunk.css.map",
+    "static/js/2.d7ff5cb8.chunk.js.LICENSE.txt": "/movie_nomard_2021/static/js/2.d7ff5cb8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.475c9054.js",
+    "static/js/2.d7ff5cb8.chunk.js",
+    "static/css/main.6b35c89a.chunk.css",
+    "static/js/main.871a1214.chunk.js"
+  ]
+}
