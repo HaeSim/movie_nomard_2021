@@ -1,61 +1,19 @@
 import React from 'react'
-import axios from 'axios'
-import Movie from './Movie'
-import './App.css'
+import { BrowserRouter, Route } from 'react-router-dom'
+import About from './routes/About'
+import Home from './routes/Home'
+import Detail from './routes/Detail'
+import Navigation from './components/Navigation'
 
-class App extends React.Component {
-  state = {
-    isLoading: true,
-    movies: [],
-  }
-
-  getMovies = async () => {
-    const {
-      data: {
-        data: { movies },
-      },
-    } = await axios.get(
-      'https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by:rating'
-    )
-    this.setState({ movies, isLoading: false })
-  }
-
-  componentDidMount() {
-    this.getMovies()
-  }
-  componentDidUpdate() {
-    console.log('업데이트완료')
-  }
-  componentWillUnmount() {
-    console.log('종료')
-  }
-  render() {
-    console.log('랜더링중')
-    const { isLoading, movies } = this.state
-    return (
-      <section className="container">
-        {isLoading ? (
-          <div className="loader">
-            <span className="loader_text">Loading...</span>
-          </div>
-        ) : (
-          <div className="movies">
-            {movies.map(movie => (
-              <Movie
-                key={movie.id}
-                id={movie.id}
-                year={movie.year}
-                title={movie.title}
-                summary={movie.summary}
-                poster={movie.medium_cover_image}
-                genres={movie.genres}
-              />
-            ))}
-          </div>
-        )}
-      </section>
-    )
-  }
+function App() {
+  return (
+    <BrowserRouter>
+      <Navigation />
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/movie/:id" component={Detail} />
+    </BrowserRouter>
+  )
 }
 
 export default App
